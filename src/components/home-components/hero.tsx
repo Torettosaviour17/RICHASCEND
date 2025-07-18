@@ -1,5 +1,5 @@
 // src/components/Hero/HeroSection.tsx
-import { useEffect, useRef, useState } from "react";
+  import { useEffect, useRef, useState } from "react";
 
 const HeroSection = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);

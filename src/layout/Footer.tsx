@@ -1,12 +1,21 @@
 // src/layout/Footer.tsx
-import { FaLinkedin, FaTwitter, FaInstagram, FaYoutube, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
+import { 
+  FaLinkedin, 
+  FaTwitter, 
+  FaInstagram, 
+  FaYoutube, 
+  FaMapMarkerAlt, 
+  FaPhone, 
+  FaEnvelope, 
+  FaClock 
+} from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-900 text-white pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+    <footer className="bg-gray-900 text-white w-full">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 pt-20 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
           {/* Company Info */}
           <div className="space-y-6">

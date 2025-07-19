@@ -1,6 +1,6 @@
 // src/components/OurPeopleSection.tsx
 import { motion } from "framer-motion";
-import { FaUserTie } from "react-icons/fa";
+// import { FaUserTie } from "react-icons/fa";
 
 const OurPeopleSection = () => {
   return (

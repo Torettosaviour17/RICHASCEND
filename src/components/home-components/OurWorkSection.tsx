@@ -11,7 +11,7 @@ const OurWorkSection = () => {
   // Animated Counter Component
   const AnimatedCounter = ({ value, duration = 2 }: { value: string; duration?: number }) => {
     const [displayValue, setDisplayValue] = useState("0");
-    const controls = useRef(motion.div);
+    // const controls = useRef(motion.div);
     
     // Extract numeric value and suffix (like % or +)
     const numericValue = parseFloat(value.replace(/[^0-9.]/g, ''));

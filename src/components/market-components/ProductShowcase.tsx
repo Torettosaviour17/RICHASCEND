@@ -1,9 +1,36 @@
-// src/components/market-components/ProductShowcase.tsx
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaBolt, FaSun } from "react-icons/fa";
 
 const ProductShowcase = () => {
   const [activeTab, setActiveTab] = useState("transformers");
+  const [isLoading, setIsLoading] = useState(true);
+  const transformersVideoRef = useRef<HTMLVideoElement>(null);
+  const solarVideoRef = useRef<HTMLVideoElement>(null);
+
+  // Play video when tab changes
+  useEffect(() => {
+    setIsLoading(true);
+
+    const playVideo = () => {
+      if (activeTab === "transformers" && transformersVideoRef.current) {
+        transformersVideoRef.current.play().catch((e) => {
+          console.log("Transformers video play failed:", e);
+        });
+      } else if (activeTab === "solar" && solarVideoRef.current) {
+        solarVideoRef.current.play().catch((e) => {
+          console.log("Solar video play failed:", e);
+        });
+      }
+    };
+
+    // Small delay to ensure DOM has updated
+    const timer = setTimeout(() => {
+      playVideo();
+      setIsLoading(false);
+    }, 50);
+
+    return () => clearTimeout(timer);
+  }, [activeTab]);
 
   return (
     <section className="py-20 bg-white dark:bg-gray-900">
@@ -41,24 +68,38 @@ const ProductShowcase = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="bg-gray-100 dark:bg-gray-800 rounded-xl aspect-video flex items-center justify-center">
+          <div className="bg-gray-100 dark:bg-gray-800 rounded-xl aspect-video flex items-center justify-center relative">
+            {isLoading && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-12 h-12 border-t-2 border-red-600 rounded-full animate-spin"></div>
+              </div>
+            )}
+
             {activeTab === "transformers" ? (
               <video
+                ref={transformersVideoRef}
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="w-full h-full object-cover"
+                className={`w-full h-full object-cover ${
+                  isLoading ? "opacity-0" : "opacity-100"
+                }`}
+                onCanPlayThrough={() => setIsLoading(false)}
               >
                 <source src="/videos/transformers.mp4" type="video/mp4" />
               </video>
             ) : (
               <video
+                ref={solarVideoRef}
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="w-full h-full object-cover"
+                className={`w-full h-full object-cover ${
+                  isLoading ? "opacity-0" : "opacity-100"
+                }`}
+                onCanPlayThrough={() => setIsLoading(false)}
               >
                 <source src="/videos/solar.mp4" type="video/mp4" />
               </video>

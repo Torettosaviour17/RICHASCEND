@@ -1,5 +1,5 @@
 // src/components/market-components/TechSection.tsx
-import React from "react";
+
 import { FaCogs, FaLightbulb, FaShieldAlt, FaLeaf } from "react-icons/fa";
 
 const TechSection = () => {

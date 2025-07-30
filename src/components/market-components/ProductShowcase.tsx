@@ -1,5 +1,5 @@
 // src/components/market-components/ProductShowcase.tsx
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBolt, FaSun } from "react-icons/fa";
 
 const ProductShowcase = () => {

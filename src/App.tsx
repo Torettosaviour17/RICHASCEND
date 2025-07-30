@@ -5,7 +5,7 @@ import Navbar from "./layout/Navbar";
 import MarketPage from "./pages/MarketPage";
 import News from "./pages/News";
 import Services from "./pages/Services";
-import Projects from "./pages/Projects";
+import Projects from "./pages/ProjectsPage";
 import Insights from "./pages/Insights";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";

@@ -7,23 +7,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-
-    // ✅ React automatic JSX runtime (no need to import React)
     "jsx": "react-jsx",
-
-    // Quality
     "strict": true,
     "skipLibCheck": true,
-
-    // Make builds fail on unused stuff (good for prod discipline)
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-
-    // Vite env types (import.meta.env, etc.)
     "types": ["vite/client"],
-
-    // If you want to use "@/..." imports, keep these two:
-    // (and add the alias in vite.config.ts below)
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]

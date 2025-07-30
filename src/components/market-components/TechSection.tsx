@@ -1,7 +1,8 @@
+import type { ReactNode } from "react";
 import { FaCogs, FaLightbulb, FaShieldAlt, FaLeaf } from "react-icons/fa";
 
 type Feature = {
-  icon: JSX.Element;
+  icon: ReactNode;
   title: string;
   color: string; // Tailwind text color class
   description: string;

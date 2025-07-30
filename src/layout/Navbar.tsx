@@ -78,7 +78,7 @@ export default function Navbar() {
 
   // Navigation items
   const centerNavItems = [
-    { path: "/market", label: "Markets" },
+    { path: "/markets", label: "Markets" },
     { path: "/services", label: "Services" },
     { path: "/projects", label: "Projects" },
     { path: "/insights", label: "Insights" },

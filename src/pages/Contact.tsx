@@ -1,5 +1,3 @@
-// src/pages/ContactPage.tsx
-import React from "react";
 import {
   FaMapMarkerAlt,
   FaPhone,
@@ -10,6 +8,7 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
+import Footer from "../layout/Footer";
 
 const ContactPage = () => {
   return (
@@ -385,6 +384,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

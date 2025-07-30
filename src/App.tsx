@@ -1,12 +1,14 @@
-// src/App.tsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-// import Services from "./pages/Services";
-// import Projects from "./pages/Projects";
-// import Insights from "./pages/Insights";
-// import Contact from "./pages/Contact";
 import Navbar from "./layout/Navbar";
+import MarketPage from "./pages/MarketPage";
+import News from "./pages/News";
+import Services from "./pages/Services";
+import Projects from "./pages/Projects";
+import Insights from "./pages/Insights";
+import Careers from "./pages/Careers";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -17,10 +19,13 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            {/* <Route path="/services" element={<Services />} /> */}
-            {/* <Route path="/projects" element={<Projects />} /> */}
-            {/* <Route path="/insights" element={<Insights />} /> */}
-            {/* <Route path="/contact" element={<Contact />} /> */}
+            <Route path="/market" element={<MarketPage />} />
+            <Route path="/News" element={<News />} />
+            <Route path="/Services" element={<Services />} />
+            <Route path="/Projects" element={<Projects />} />
+            <Route path="/Insights" element={<Insights />} />
+            <Route path="/Careers" element={<Careers />} />
+            <Route path="/Contact" element={<Contact />} />
           </Routes>
         </div>
       </div>

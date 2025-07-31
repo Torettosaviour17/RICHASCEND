@@ -1,7 +1,3 @@
-"use client";
-
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import HeroSection from "../components/insights-components/HeroSection";
 import IndustryTrendsSection from "../components/insights-components/IndustryTrendsSection";
 import CaseStudySection from "../components/insights-components/CaseStudySection";

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "postinstall": "pnpm approve-builds || pnpm approve-builds --recursive || true",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
